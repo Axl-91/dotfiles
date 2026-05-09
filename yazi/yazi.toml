@@ -1,0 +1,20 @@
+[opener]
+image = [
+  { run = 'loupe "$@"', desc = "Gnome Image Viewer", orphan = true, for = "unix" },
+  { run = 'swappy -f "$@"', desc = "Swappy edit", orphan = true, for = "unix" },
+  { run = 'gthumb "$@"', desc = "gthumb", orphan = true, for = "unix" },
+]
+
+[open]
+rules = [{ mime = "image/*", use = ["image", "copy", "reveal"] }]
+
+
+[[plugin.prepend_fetchers]]
+id = "git"
+url = "*"
+run = "git"
+
+[[plugin.prepend_fetchers]]
+id = "git"
+url = "*/"
+run = "git"

@@ -1,0 +1,131 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source": "~/.config/fastfetch/images/fedora.png",
+    "height": 18,
+    "padding": {
+      "top": 2,
+      "right": 2,
+      "left": 2
+    }
+  },
+  "display": {
+    "separator": " ▸ "
+  },
+  "modules": [
+    /* Header with custom nickname */
+    {
+      "type": "custom",
+      "format": "{#37}╔══════════════════════════════════════════════════╗"
+    },
+    /* User and Network info */
+    {
+      "type": "title",
+      "key": "{#35}╭─ Master"
+    },
+    {
+      "type": "localip",
+      "key": "{#35}╰─ Local IP",
+      "showIpv6": false
+    },
+    "break",
+    /* System & OS Info */
+    {
+      "type": "os",
+      "key": "{#32} ╭─{icon}",
+      "format": "{3} {12}"
+    },
+    {
+      "type": "kernel",
+      "key": "{#32} ├─{icon}",
+      "format": "{} {~0,7}"
+    },
+    {
+      "type": "packages",
+      "key": "{#32} ├─{icon}"
+    },
+    {
+      "type": "battery",
+      "key": "{#32} ├─{icon}"
+    },
+    {
+      "type": "uptime",
+      "key": "{#32} ├─{icon}",
+      "format": "{?days}{days}d {?}{?hours}h {?}{minutes}m {seconds}s"
+    },
+    {
+      "type": "shell",
+      "key": "{#32} ╰─{icon}"
+    },
+    "break",
+    /* Hardware & Performance */
+    {
+      "type": "host",
+      "key": "{#34} ╭─{icon}",
+      "format": "{} ({})"
+    },
+    {
+      "type": "cpu",
+      "key": "{#34} ├─{icon}",
+      "temp": true,
+      "format": "{} ({8})"
+    },
+    {
+      "type": "gpu",
+      "key": "{#34} ├─{icon}",
+      "temp": true
+    },
+    {
+      "type": "memory",
+      "key": "{#34} ├─{icon}",
+      "format": "{} / {} ({})"
+    },
+    {
+      "type": "disk",
+      "key": "{#34} ├─{icon}",
+      "format": "{} / {} ({})"
+    },
+    {
+      "type": "swap",
+      "key": "{#34} ├─{icon}",
+      "format": "{} / {} ({})"
+    },
+    {
+      "type": "loadavg",
+      "key": "{#34} ╰─{icon}",
+      "format": "{}"
+    },
+    "break",
+    /* Desktop Environment info */
+    {
+      "type": "wm",
+      "key": "{#33} ╭─{icon}"
+    },
+    {
+      "type": "wmtheme",
+      "key": "{#33} ├─{icon}"
+    },
+    {
+      "type": "icons",
+      "key": "{#33} ├─{icon}"
+    },
+    {
+      "type": "terminalfont",
+      "key": "{#33} ├─{icon}"
+    },
+    {
+      "type": "terminal",
+      "key": "{#33} ╰─{icon}"
+    },
+    /* Footer & Color Palette */
+    {
+      "type": "custom",
+      "format": "{#37}╚════════════════════════🟕═════════════════════════╝"
+    },
+    {
+      "type": "custom",
+      "format": " \u001b[33m󰮯  \u001b[32m  \u001b[36m  \u001b[34m  \u001b[35m  \u001b[90m  \u001b[91m  \u001b[92m  \u001b[93m  \u001b[94m  \u001b[95m  \u001b[96m  \u001b[31m  \u001b[33m  \u001b[32m  \u001b[36m  \u001b[34m  \u001b[35m "
+    },
+    "break"
+  ]
+}

@@ -1,0 +1,22 @@
+# Keybinds for navigation through tabs when they are splitted
+
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+l=goto_split:right
+keybind = ctrl+j=goto_split:bottom
+keybind = ctrl+k=goto_split:top
+keybind = ctrl+f=toggle_split_zoom
+keybind = ctrl+shift+d=close_surface
+
+window-decoration = true
+background-opacity = 0.9
+background-blur = 40
+
+gtk-custom-css = tab-style.css
+
+# gtk-wide-tabs = false
+# gtk-tabs-location = bottom
+
+# this makes titlebar not too fat
+gtk-titlebar = false
+# this make titlebar even more slim, but will also disable all adwaita related features
+# gtk-adwaita = false

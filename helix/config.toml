@@ -1,0 +1,63 @@
+theme = "carbon"
+
+[editor]
+bufferline = "multiple"
+end-of-line-diagnostics = "hint"
+color-modes = true
+rulers = [80]
+
+[editor.statusline]
+left = ["mode", "spinner", "spacer", "file-name"]
+center = ["version-control"]
+right = [
+  "diagnostics",
+  "selections",
+  "position",
+  "position-percentage",
+  "spacer",
+]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.inline-diagnostics]
+cursor-line = "error"
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+nbsp = "none"
+nnbsp = "none"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+nnbsp = "␣"
+tab = "→"
+newline = "⏎"
+tabpad = "·"  # Tabs will look like "→···" (depending on tab width)
+
+[keys.normal]
+esc = ["collapse_selection", "keep_primary_selection"]
+"C-y" = ":sh zellij action toggle-pane"
+S-down = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+S-up = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_up",
+  "paste_before",
+]
+C-r = [
+  ":write-all",
+  ":insert-output scooter --no-stdin >/dev/tty",
+  ":redraw",
+  ":reload-all",
+]
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.lsp]
+display-inlay-hints = true
+display-messages = true
