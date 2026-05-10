@@ -51,7 +51,7 @@
     {
       "type": "uptime",
       "key": "{#32} ├─{icon}",
-      "format": "{?days}{days}d {?}{?hours}h {?}{minutes}m {seconds}s"
+      "format": "{hours}h {minutes}m {seconds}s"
     },
     {
       "type": "shell",
@@ -92,8 +92,7 @@
     },
     {
       "type": "loadavg",
-      "key": "{#34} ╰─{icon}",
-      "format": "{}"
+      "key": "{#34} ╰─{icon}"
     },
     "break",
     /* Desktop Environment info */
