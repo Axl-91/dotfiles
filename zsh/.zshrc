@@ -172,3 +172,4 @@ export PATH
 [ -f "/home/axel/.ghcup/env" ] && . "/home/axel/.ghcup/env" # ghcup-env
 export PATH="/home/axel/.c3:$PATH"
 
+eval "$(zoxide init zsh)"

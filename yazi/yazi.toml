@@ -5,8 +5,51 @@ image = [
   { run = 'gthumb "$@"', desc = "gthumb", orphan = true, for = "unix" },
 ]
 
+extract = [
+  { run = 'ya pub extract --list "$@"', desc = "Extract here", for = "unix" },
+]
+
+play = [{ run = "xdg-open %s1", desc = "Play", for = "linux", orphan = true }]
+
+open = [{ run = "xdg-open %s1", desc = "Open", for = "linux" }]
+
 [open]
-rules = [{ mime = "image/*", use = ["image", "copy", "reveal"] }]
+rules = [
+  # Folder
+  { url = "*/", use = [
+    "edit",
+    "open",
+    "reveal",
+  ] },
+  # Text
+  { mime = "text/*", use = [
+    "edit",
+    "reveal",
+  ] },
+  # Images
+  { mime = "image/*", use = [
+    "image",
+    "copy",
+    "reveal",
+  ] },
+
+  # Archive
+  { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", use = [
+    "open",
+    "extract",
+    "reveal",
+  ] },
+  { mime = "application/x-{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", use = [
+    "open",
+    "extract",
+    "reveal",
+  ] },
+  # Fallback
+  { url = "*", use = [
+    "open",
+    "reveal",
+  ] },
+]
 
 
 [[plugin.prepend_fetchers]]
