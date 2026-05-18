@@ -4,13 +4,13 @@ vim.pack.add {
   -- I recommend you set a version range
   version = vim.version.range('^9')},
   { src = 'https://github.com/lewis6991/gitsigns.nvim' },
-  { src= 'https://github.com/folke/which-key.nvim' },
-  { src= 'https://github.com/akinsho/bufferline.nvim' }
+  { src= 'https://github.com/akinsho/bufferline.nvim' },
+  { src= 'https://github.com/nvim-telescope/telescope.nvim' }
 }
 
-require("which-key").setup()
-
 require("bufferline").setup()
+
+require("telescope").setup()
 
 require("gitsigns").setup({
 	signs = {
