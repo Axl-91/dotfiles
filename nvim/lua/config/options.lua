@@ -10,11 +10,14 @@ opt.winborder = "rounded"
 
 opt.linebreak = true
 
+-- Indentation
+opt.tabstop = 2
+opt.softtabstop = 2
+opt.shiftwidth = 2
+opt.expandtab = true
+opt.smartindent = false
+opt.wrap = false
+
 opt.ignorecase = true
 opt.smartcase = true
-
-vim.keymap.set('n', '<Space>f', ':Neotree toggle<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<Space>b', ':Neotree buffers toggle<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<Space>e', ':Trouble diagnostics toggle<CR>', { desc = 'Show diagnostic' })
-
 
