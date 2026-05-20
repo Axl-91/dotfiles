@@ -9,8 +9,10 @@ require("vim._core.ui2").enable({
 	},
 })
 
+require("plugins")
 require("config")
 
+-- Show Diagnostics
 vim.diagnostic.config({
 	virtual_text = {
 		prefix = "●",

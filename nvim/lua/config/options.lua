@@ -10,6 +10,9 @@ opt.winborder = "rounded"
 
 opt.linebreak = true
 
+opt.isfname:append("@-@")
+opt.termguicolors = true
+
 -- Indentation
 opt.tabstop = 2
 opt.softtabstop = 2
@@ -18,6 +21,10 @@ opt.expandtab = true
 opt.smartindent = false
 opt.wrap = false
 
+-- Split
+opt.splitbelow = true
+opt.splitright = true
+
+-- Search
 opt.ignorecase = true
 opt.smartcase = true
-
