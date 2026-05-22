@@ -1,4 +1,5 @@
 -- Load all plugins
+require("plugins.treesitter")
 require("plugins.mason")
 require("plugins.tokyonight")
 require("plugins.mini")
@@ -13,3 +14,4 @@ require("plugins.which-key")
 require("plugins.lua-line")
 require("plugins.render-markdown")
 require("plugins.toggleterm")
+require("plugins.fidget")
